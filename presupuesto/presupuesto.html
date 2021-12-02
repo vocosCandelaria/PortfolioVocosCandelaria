@@ -61,46 +61,116 @@
             </ul>
         </div>
     </nav>
+    
 <form action="">
     <section class="container-fluid">
         <div class="row">
-            <div id="contenedorRosa">
+            <div class="contPresupuestoIz col-xs-12 col-sm-12 col-md-4 col-lg-3">
                 <h1>Presupuesto</h1>
             </div>
-            <div id="contenedorBlanco">
-                <h2 class="hacheDos">SOLICITUD DE PRESUPUESTO</h2>
+            <div class="contPresupuestoDer col-xs-12 col-sm-12 col-md-8 col-lg-9">
+                <h2>Solicitud de Presupuesto</h2>
 
-                Nombre: <input type="text" name="Ingrese su nombre completo" required><br><br>
+                <form action="" class="form--propiedades">
+    
+                    <div class="form-group" class="form__grupos">
+                      <label class="form__titulo" for="text">Nombre:</label>
+                      <input type="text" required class="form-control" class="form__input" placeholder="ingrese su nombre completo">
+                    </div>
+    
+                    <div class="form-group">
+                      <label class="form__titulo" for="email">Email:</label>
+                      <input type="email" class="form-control" class="form__input"
+                        placeholder="ingrese un correo electrónico" name="email">
+                    </div>
+    
+                    <div class="form-group">
+                      <label for="text" class="form__titulo">Teléfono:</label>
+                      <input type="text" class="form-control" required class="form__input" placeholder="ingrese su teléfono"
+                        name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="text" class="form__titulo">Tipo de Usuario:</label> <br>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="optradio">Freelance
+                        </label>
+                      </div>
+                      <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="optradio">Agencia
+                        </label>
+                      </div>
+                      <div class="form-check-inline disabled">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="optradio">Pyme
+                        </label>
+                      </div>
+                    </div>
+                    
+                      <div class="form-group">
+                        <label class="form__titulo" for="text">Servicios de interes:</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Diseño de pagina web
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Diseño publicitario
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="" >Diseño de objetos
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="" >Diseño de marcas/logos
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="" >Gestion de redes sociales
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Diseño de Packaging
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Otros:
+                        </label>
+                      </div>
+                    </div>
+                      <div class="form-group">
+                        <label for="comment">Ingrese un comentario:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                  </form>
+                  
+                <form>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFile">
+                      <label class="custom-file-label" for="customFile">Selecciona un archivo</label>
+                    </div>
+                  </form>
+                  
+                  <script>
+                  // Add the following code if you want the name of the file appear on select
+                  $(".custom-file-input").on("change", function() {
+                    var fileName = $(this).val().split("\\").pop();
+                    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                  });
+                  </script>
 
-                <!--menu despelgable-->
-                <h5>Servicios de interes</h5>
-                <select name="Servicio de interes">
-                    <option>Diseño de pagina web</option>
-                    <option>Diseño publicitario</option>
-                    <option>Diseño de objetos</option>
-                    <option>Diseño de marcas/logos</option>
-                    <option>Gestion de redes sociales</option>
-                    <option>Diseño de packaging</option>
-                    <option>Otros</option>
-                </select><br><br>
-                <!--fin de menu despelgable-->
-                Email: <input type="email" required><br><br>
-
-                Telefono: <input type="text" required placeholder="Ej: 351 3573398"><br><br>
-
-                <h5>Tipo de Usuario</h5>
-                Freelance <input type="checkbox"><br>
-                Pyme<input type="checkbox"><br>
-                Agencia <input type="checkbox"><br><br>
-
-
-                <textarea name="areadetexto" id="" cols="30" rows="10"
-                    placeholder="ingrese un comentario"></textarea><br><br>
-                Adjuntar archivo <input type="file"> <br>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar todo">
-
-
+                  <div class="form-group botonEnviar">
+                      <button type="submit" class="btn btn-outline-danger btn-block">Enviar Solicitud</button>
+                </div>
+                  
             </div>
         </form>
     </section>
