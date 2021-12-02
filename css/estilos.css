@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: gray;
+    width: 100%;
+}
+
+/*-------------ESTILOS PORTADA--------------------*/
+.contenedorPortada {
+    background-image:url(../multimedia/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.contenedorPortada:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute; /*puse position para poder mover la capa hacia atras en el eje z*/
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(130deg, #509fc9,#e83b59);
+    opacity: 0.3;
+    z-index: 1;
+}
+#nombre {
+    position: relative;
+    z-index: 2;
+    padding-top: 10%;
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#carrera {
+    position: relative;
+    z-index: 2;
+    padding-top: 10%;
+    color: crimson;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Sacramento', cursive;
+}
+
+
+nav a {
+    
+    font-size: 18px;
+    font-family: 'Archivo Black', sans-serif;
+    text-decoration: none;
+    padding: 15px 20px;
+    
+}
+
+
+/*----------sub menu--------*/
+ul ul {
+    display: none;
+    position: absolute;
+    background-color: crimson;
+    transition: all 2s;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul ul li {
+    display: block;
+}
+
+/*------ESTILOS DE MIS PROYECTOS index */
+.centradoVyH{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container-fluid #proyectoGris {
+    height: 100vh;
+    background-color: rgb(247, 238, 244);
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-fluid #proyectoGris h2{
+    font-family: 'Sacramento', cursive;
+    color: crimson;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 45%;
+}
+
+#proyectoGris ul {
+    text-align: center;
+    
+}
+
+#proyectoGris ul li {
+    display: inline-block;
+}
+
+#proyectoGris ul li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(44, 40, 44);
+    text-align: center;
+}
+
+#proyectoFotos {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+   /*--------animacion zoom--------*/
+#proyectoFotos img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size:cover;
+    animation-name: zoom;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-direction: alternate-reverse;
+}
+@keyframes zoom{
+0% {transform: scale(1.1);}
+100%{transform: scale(1.2);}
+}
+
+/*--------diseño responsive para movil---------*/
+
+@media (max-width:760px)and(orientation:portrait){
+    
+    h2 #nombre .wow .tada{
+        font-size: 8vw;
+    }
+    #carrera{
+        font-size: 15px;
+    }
+    #contenedorBlanco{
+        font-size: 16px;
+    }
+    .row{
+        height: 50%;
+    }
+    #contenedorRosa {
+        height: 20vh;
+    }
+    .fotoMia{
+        display:none;
+    }
+}
+
+
+.contenidoTexto {
+    background-color: white;
+}
+
+.contenedorTextoRosa {
+    background-color: crimson;
+}
+
+.contenidoTexto h3 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: crimson;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenidoTexto p {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 40px;
+    font-size: 17px;
+    color: rgb(24, 24, 24);
+    line-height: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedorTextoRosa p {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 40px;
+    font-size: 17px;
+    color: white;
+    line-height: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedorTextoRosa h3 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.fijo {
+    height: 100vh;
+    width: 25%;
+    background-color: white;
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    font-family: 'Sacramento', cursive;
+    color: rgb(34, 34, 34);
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.fijo .proyectoGris {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: 'Sacramento', cursive;
+    display: flex;
+    padding-bottom: 80%;
+    padding-left: 10%;
+}
+.breadcrumb{
+    background-color: white !important;
+}
+
+.fijo .proyectoGris ol a {
+    color: crimson;
+    
+}
+
+.contenedorDisenoObjetos {
+    width: 75%;
+    height: auto;
+    margin-left: 25%;
+    background-color: #FF82BE;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+.contenedorDisenoObjetos h2{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Archivo Black';
+    color: white;
+}
+
+.contenedorDisenoObjetos .contenedorProyectos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.objeto {
+    /*border: hotpink 2px solid;*/
+    display: flex;
+    width: 100%;
+}
+.contenedorProyectos .slider{
+    width: 153.5%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 100%;
+
+    animation-name: carrusel;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes carrusel{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    40%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+.slider img{
+    width: 100;
+}
+
+.contenidoTexto {
+    display: flex;
+    flex-direction: column;
+}
+
+#disenoObjetos {
+    display: flex;
+}
+
+.contenedorDisenoPublicitario {
+    width: 75%;
+    height: auto;
+    margin-left: 25%;
+    background-color: rgb(236, 236, 236);
+    background-size: contain;
+    padding-bottom: 4%;
+}
+
+.contenedorPublicidades {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 2%;
+    justify-content: center;
+
+}
+
+.publicidad {
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+.publicidad:hover{
+    transform: scale(1.1);
+}
+
+#publicidad1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(../multimedia/publicidad\ rectangular.jpg);
+    background-size: contain;
+    width: 250px;
+    height: 500px;
+}
+
+#publicidad2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(../multimedia/publicidad\ cuadrada.jpg);
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+}
+
+#publicidad3 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    background-image: url(../multimedia/publicidad\ rectangular\ 2.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 500px;
+}
+
+#publicidad4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-image: url(../multimedia/publicidad\ cuadrada\ 3.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+#publicidad5 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background-image: url(../multimedia/publicidad.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 500px;
+}
+
+#publicidad6 {
+    grid-column: 4/5;
+    grid-row: 2/4;
+    background-image: url(../multimedia/publicidad\ rectangular\ 3.jpg);
+    background-size: cover;
+
+    width: 250px;
+    height: 500px;
+}
+
+#publicidad7 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url(../multimedia/publicidad\ cuadrada\ 4.jpg);
+    background-size: contain;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+#publicidad8 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background-image: url(../multimedia/216fd6b7ca21ec2905bfca28fc3a2eff.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+}
+.contenedorDisenoPackaging{
+    width: 75%;
+    height: 100vh;
+    background-color:rgb(236, 236, 236);
+    margin-left: 25%; 
+}
+.contenedorCarrusel{
+    width: 100%;
+    align-items: center;
+}
+.carousel-inner img{
+width: 100%;
+height: 100vh;
+background-size: cover;
+}
+.carousel-caption p{
+color: rgb(54, 53, 53);
+}
+/*------ESTILOS SOBRE MI-------------*/
+/*CONTENEDOR ROSA DE FONDO*/
+
+#contenedorRosa {
+    height: 100vh;
+    background-color: #FF82BE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedorRosa h2 {
+    font-family: 'Sacramento', cursive;
+    color: white;
+    font-size: 60px;
+}
+
+#contenedorBlanco {
+    background-color: antiquewhite;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 4%;
+    padding-top: 2%;
+    font-family: 'Raleway', sans-serif;
+    line-height: 30px;
+    color: rgb(54, 53, 53);
+}
+.fotoMia{
+    max-width:150px;
+    max-height:150px;
+    position: absolute;
+    z-index: 1;
+    left:91%;
+    top:15%;
+    animation-timing-function: ease-in-out;
+ animation-iteration-count: 1;
+ animation-delay: 1s;
+animation-duration: 1s;
+}
+
+.enlaces {
+    color: crimson;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#contenedorBlanco a:hover {
+    color: #FF82BE;
+}
+
+/*--------------CONTACTO--------------*/
+.contenedorContacto {
+    height: 100vh;
+}
+
+.contenedorIzquierda {
+    background-color: rgb(248, 62, 99);
+    height: 100vh;
+}
+
+.contenedorIzquierda h2 {
+    font-family: 'Sacramento', cursive;
+    color: white;
+    font-size: 60px;
+    padding-top: 45%;
+    text-align: center;
+}
+
+.contenedorDerecha {
+    height: 100vh;
+    padding: 5%;
+    background-color: #dfdbdb;
+}
+
+.bloque__titulo--tipografia {
+    color: crimson;
+    font-family: "Archivo Black", sans-serif;
+  }
+  
+  .bloque__subtitulo--tipografia {
+    color: #2e2e2e;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .form--propiedades {
+    color: crimson;
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+  }
+  
+  .boton--propiedades {
+    min-width: 180px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    border: 100px;
+    background-color: crimson;
+    position:relative;
+    margin-bottom: 2%;
+  }
+  .boton--propiedades:hover {
+        background-color: rgb(236, 155, 168);
+  }
+  
+  .curriculum--propiedades {
+    background-color: #2e2e2e;
+    padding: 2%;
+    width: 100%;
+  }
+  
+  .curriculum__titulo--texto {
+    color: white;
+  }
+
+/******************SOBRE MI CARPETA APARTE*************/
+.bodySobreMi {
+    background-color: #eeeeee;
+  }
+
+  .contenedor1, .contenedor--final {
+    display: flex;
+    padding: 4%;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .contenedor2 {
+    display: flex;
+    padding: 4%;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .contenedor3 {
+    display: flex;
+    padding: 4%;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .contenedorIzq {
+    width: 50%;
+    height: 100%;
+  }
+  .contenedorIzq h4 {
+    color: crimson;
+    font-family: "Archivo Black", sans-serif;
+  }
+  .contenedorIzq p {
+    color: crimson;
+  }
+  .contenedorIzq a {
+    background-color: crimson;
+    color: white;
+    width: auto;
+    height: 40px;
+    border-radius: 20px;
+  }
+  
+  .contenedorDer {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .contenedorDer img {
+    width: 100%;
+    background-size: cover;
+    margin: 0 auto;
+  }
+  
+  /*mapa*/
+  .contenedor1, .contenedor--final {
+    background-color: pink;
+  }
+  
+  .contenedor2 {
+    background-color: #f0f0f0;
+  }
+  
+  .contenedor3 {
+    background-color: #f797a7;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .contenedor1 .contenedor--final {
+      display: block;
+      padding: 4%;
+      width: 100%;
+      height: 100vh;
+    }
+    .contenedor1 .contenedorIzq .contenedor--final .contenedorIzq {
+      width: 100%;
+      height: 30%;
+    }
+    .contenedor1 .contenedorIzq a .contenedor--final .contenedorIzq a {
+      margin: 2%;
+    }
+    .contenedor1 .contenedorDer .contenedor--final .contenedorDer {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .contenedor2 {
+      display: block;
+      padding: 4%;
+      width: 100%;
+      height: 100vh;
+    }
+    .contenedor2 .contenedorIzq {
+      width: 100%;
+      height: 30%;
+    }
+    .contenedor2 .contenedorIzq a {
+      margin: 2%;
+    }
+    .contenedor2 .contenedorDer {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .contenedor3 {
+      display: block;
+      padding: 4%;
+      width: 100%;
+      height: 100vh;
+    }
+    .contenedor3 .contenedorIzq {
+      width: 100%;
+      height: 30%;
+    }
+    .contenedor3 .contenedorIzq a {
+      margin: 2%;
+    }
+    .contenedor3 .contenedorDer {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .contenedor--final {
+      height: auto;
+    }
+    .contenedor--final .galeria-tarjetas {
+      flex-wrap: wrap;
+    }
+  }
+  .contenedor--final {
+    margin-top: 2px;
+    display: block;
+    background-color: #333333;
+  }
+  .contenedor--final h4 {
+    font-family: "Archivo Black", sans-serif;
+    color: white;
+    font-size: 30px;
+  }
+  .contenedor--final .galeria-tarjetas {
+    /*contenedor de las columnas*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+  }
+  .contenedor--final .galeria-tarjetas .tarjeta {
+    /*columna*/
+    display: block;
+    background-color: #f0f0f0;
+    flex: 40%;
+    height: 100%;
+    margin: 0.3%;
+  }
+  .contenedor--final .galeria-tarjetas .tarjeta img {
+    width: 100%;
+    height: 70%;
+    padding: 3%;
+    border-radius: 20px;
+  }
+  .contenedor--final .galeria-tarjetas .tarjeta h5 {
+    font-family: "Archivo Black", sans-serif;
+    padding: 3%;
+    text-align: center;
+    color: crimson;
+    font-size: 20px;
+  }
+  .contenedor--final .galeria-tarjetas .tarjeta p {
+    font-family: "Raleway", sans-serif;
+    padding: 4%;
+  }
+  
+  /*# sourceMappingURL=estilos.css.map */
+    
+  
+  /*# sourceMappingURL=estilos.css.map */
+  
