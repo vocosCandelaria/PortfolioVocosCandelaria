@@ -731,6 +731,39 @@ animation-duration: 1s;
     font-family: "Raleway", sans-serif;
     padding: 4%;
   }
+  /*Estilos de presupuesto*/
+  .contPresupuestoIz {
+    height: auto;
+    background-color: #FF82BE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contPresupuestoIz h1{
+    font-family: 'Sacramento', cursive;
+    color: white;
+    font-size: 60px;
+}
+
+.contPresupuestoDer {
+    background-color: antiquewhite;
+    height: auto;
+    padding-left: 8%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Raleway', sans-serif;
+    line-height: 30px;
+    color: rgb(54, 53, 53);
+}
+.form__titulo{
+    color: crimson;
+    font-family: "Raleway", sans-serif;
+}
+.botonEnviar{
+    margin-top: 2%;
+}
   
   /*# sourceMappingURL=estilos.css.map */
     
